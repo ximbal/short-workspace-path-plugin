@@ -101,8 +101,8 @@ public class LocatorTest {
         FreeStyleBuild b = p.scheduleBuild2(0).get();
         String buildWs = b.getWorkspace().getRemote();
         String wsDir = s.getRootPath() + DS + "workspace" + DS;
-        assertThat(buildWs, startsWith(wsDir + "and_a_pro"));
-        assertThat(buildWs, buildWs.length(), equalTo(wsDir.length() + 24));
+        assertThat(buildWs, startsWith(wsDir + "oject_in_it"));
+        assertThat(buildWs, buildWs.length(), equalTo(wsDir.length() + 27));
     }
 
     @Test
