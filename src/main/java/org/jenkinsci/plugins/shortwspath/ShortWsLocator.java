@@ -73,7 +73,7 @@ public class ShortWsLocator extends WorkspaceLocator {
         int usabeSpace = getUsableSpace(def, node);
         if (usabeSpace > BUILD_PATH_LENGTH) return null; // There is plenty of room
 
-        String itemName = StringUtils.abbreviate(item.getName(), 0, 16);
+        String itemName = StringUtils.abbreviate(item.getName(), 8, 21);
         // Replace the ellipsis with dashes to avoid problems with msbuild
         // prior to version 4.6.2.  It used its own path normalization (vs. built in .NET)
         // which doesn't recognize ... as a valid path.
